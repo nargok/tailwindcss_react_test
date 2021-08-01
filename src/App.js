@@ -7,9 +7,14 @@ function App() {
     <div className="App">
       <h1 className="text-4xl text-green-700 text-center font-semibold">Hello, Tailwind CSS</h1>
       <div className="grid justify-items-center py-8">
-        <button className="bg-indigo-700 font-semibold text-white py-2 px-4 rounded">
-          ボタン
-        </button>
+        <div>
+          <button className="bg-indigo-700 font-semibold text-white py-2 px-4 rounded">
+            ボタン
+          </button>
+          <button className="bg-red-700 btn">
+            ボタン2
+          </button>
+        </div>
       </div>
     </div>
   );
