@@ -3,6 +3,7 @@ import shallow from "zustand/shallow";
 import "./tailwind.css";
 import useStore from "./store/index";
 import Count from "./components/Count";
+import UserTable from "./components/UserTable";
 
 function App() {
   const { increase, decrease } = useStore(
@@ -14,8 +15,6 @@ function App() {
   );
 
   const getUsers = useStore((state) => state.getUsers);
-  const users = useStore((state) => state.users);
-
   useEffect(() => {
     getUsers();
   }, [getUsers]);
@@ -43,9 +42,7 @@ function App() {
         </div>
         <div>
           <h3 className="text-3xl">user</h3>
-          {users.map((user) => (
-            <div key={user.id}>{user.name}</div>
-          ))}
+          <UserTable />
         </div>
       </div>
     </div>
